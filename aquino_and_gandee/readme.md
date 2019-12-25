@@ -11,5 +11,15 @@ http://www.informit.com/store/front-end-web-development-the-big-nerd-ranch-guide
 <h2>Learning Front-End Web Development</h2>
 Front-end web devlopment is a very different animal from development for other platforms. Front-end technologies have no official developer documentation other than the technical specifications. Keep in mind:<br><i>The browser is a platform.</i><br>\
 
+<h1>Chapter 2 Settin Up Your First Project</h1>
+<h2>Setting Up Ottergram</h2>
+<ul>
+
+</ul>
+
+
+
+
+
 </body>
 </html>
