@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Front-End Web Development: The Big Nerd Ranch Guide</title>
+	<!--<title>Front-End Web Development: The Big Nerd Ranch Guide</title>-->
+	<link href="https://github.com/skomja00/web/blob/master/github.css">
 	<!--<link rel="stylesheet" href="stylesheets/styles.css">-->
-	<style>
+	<!--<style>
 		term {
 			font-family: "Courier New", Courier, monospace;
 		}
-	</style>
+	</style>-->
 </head>
 <body>
     <!-- -------------------------------------------------------------------- -->
