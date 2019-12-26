@@ -23,11 +23,11 @@ SOFTWARE.
 
 body {
   font-family: Courier, arial, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: white;
+  background-color: LightGrey;
   padding: 30px;
   color: #333;
 }
