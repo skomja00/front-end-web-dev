@@ -160,6 +160,21 @@
         <p>
             The text between the <code>/* */</code> indicators is a CSS <i>comment</i>. Code comments are ignored by the browser; they allow the developer to make notes in the code for future reference.
         </p>
+        <p>
+            To use a <i>class</i> as a selector in a styling rule, you prefix the class name with a dot (period). Call selectors are favorable over other kinds of selectors. You can write very descriptive class names that make you code easy to develop and maintain. Also, you can add multiple class names to an element.
+        </p>
+        <p>
+            In the the HTML source <code>&lt;span class="class-name"&gt;</code> selects the following styling rule in the CSS stylesheets;
+        </p>
+            <pre><code>.class-name {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, arial, sans-serif;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;margin: 0 2px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;padding: 0 6px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 4px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;color: rgb(255, 255, 0); /* yellow */<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;background-color: rgb(0, 128, 0); /* green */<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-size: small;<br>
+            }</code></pre>
         <h2>
             The box model
         </h2>
