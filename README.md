@@ -1,1 +1,1 @@
-See https://skomja00.github.io/web/
+See GitHub Pages https://skomja00.github.io/web/
