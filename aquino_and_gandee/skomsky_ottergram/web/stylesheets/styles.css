@@ -7,4 +7,22 @@ and open the template in the editor.
     Created on : Dec 25, 2019, 6:01:03 PM
     Author     : admin
 */
+body {
+    font-size: 10px;
+}
+a {
+    text-decoration: none;
+}
+.thumbnail-img {
+    width: 33%
+}
 
+.thumbnail-title {
+    dislay: block;
+    margin: 0;
+    padding: 4px 10px;
+    background: lightgray;
+    color: black;
+    border-radius: 4px;
+    font-size: 18px;
+}

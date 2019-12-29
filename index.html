@@ -1,120 +1,190 @@
-<!--<!DOCTYPE html>-->
+<!DOCTYPE html>
 <html>
-<head>
-	<style>
-		<title>Front-End Web Development: The Big Nerd Ranch Guide</title>
-		<link href="https://github.com/skomja00/web/blob/master/github.css">
-	</style>
-</head>
-<body>
-    <!-- -------------------------------------------------------------------- -->
-    <h1>
-		Introduction
-	</h1>
-    Front-end web development is a very different animal from development for other platforms. Front-end technologies have no official developer documentation other than the technical specifications. Keep in mind: <u><i>The browser is a platform.</i></u>
-    <!-- -------------------------------------------------------------------- -->
-    <h1>
-        Chapter 1 Setting Up Your Development Environment
-    </h1>
-    <h2>
-        NetBeans Bundle
-    </h2>
-        <p>
-            Aquino & Gandee use the Atom IDE. I am instead using NetBeans IDE 8.0.2 and Java SE Development Kit 8u191 as a development environment. This section is a collection of my own notes, references, and tips.
-        </p>
-    <ul>
-		<li>
-			<term>Node.js</term> (or simply "<term>Node</term>") lets you use programs written in JavaScript from the command line. Most front-end development tools are written for use with <term>Node.js</term>. It provides two command-line programs: 
-			<ul>
-				<li>
-					The <term>node</term> program does the work of running programs written in JavaScript. 
-				</li>
-				<li>
-					The Node Package Manager, <term>npm</term>, is needed for installing open-source development tools from the internet. <term>browser-sync</term> is a JavaScript tool that automatically reloads the browser when you save changes to your code. Install <term>browser-sync</term> using this command at the command line:<br>
-					<code>npm install -g browser-sync</code><br>
-					Navigate to you project directory, and run the following command to start <term>browser-sync</term>.<br>
-					<code>browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html"</code>
-				</li>
-			</ul>
-		</li>
-		<li>
-			Chrome has a really nice javaScript debugging environment. 
-		</li>
-		<li>
-			Firefox may not be your favorite browser, Firefox provides better syntax error checking. When you you right click a page and "View Source", you’ll see syntax errors in red font. So, try using Firefox just until you are sure your HTML and CSS do not have any syntax errors in them. 
-		</li>
-        <li>NetBeans: To View your HTML page:
-            <ul>
-                <li>
-                    Right click anywhere in the edit area and select "View". NetBeans will open up your index.html in a browser (showing "hello world"). Because you "Viewed" the page, you should see the file name and path in the address bar. 
-                <li>
-                    I like to View pages when I am working on my CSS, laying out my page, because it is a bit faster than running the page(discussed below).
-                </li>
-            </ul>
-        <li> NetBeans: To Run Your Page: If your page needs the HTTP protocol (for example making AJAX calls), you need to have Apache serve up your web page. To do this, 
-            <ul>
-                <li>
-					Right click anywhere in the editor pane and select Run (not View). The first time you run a page, there is a slight delay while NetBeans deploys your web application.
-                </li>
-                <li>
-					Notice the difference in the URL – it shows localhost as your domain, not just the file name as before when you Viewed your page. 
-                </li>
-                <li>
-					8080 is the port number that the web server uses to listen for web page requests. 
-                </li>
-            </ul>
-        </li>
-            <li>NetBeans:  Test That You Will Be Able To Write Web APIs. Later in this course, you will be writing Server Side code that responds to JavaScript requests from your web pages. We will use JSP pages for this. Test that your installation can run JSP pages, so that if there is a problem you have more time to fix it. 
-                <ul>
-                    <li>
-						Right click on the "Web Pages" folder (in the project pane) and select New - JSP 
-                    </li>
-                    <li>
-						You can accept the default file name of "newjsp". Double click newjsp to open it in the editor.
-                    </li>
-                    <li>
-						Run the page by right clicking anywhere in the editor area and selecting Run. If you see newjsp.jsp in the browser’s address bar and “Hello World” displaying, then you have properly installed the NetBeans bundle and you will be able to write Web APIs later in the semester.  
-                    </li>				
-                </ul>
-        </li>
-    </ul>
-    <!-- -------------------------------------------------------------------- -->
-    <h1>
-            Chapter 2 Setting Up Your First Project
-    </h1>
-    <h2>
-            Setting Up Ottergram
-    </h2>
-    <p>There are no rules about how to structure or name your files and folders. However, projects follow some conventions used by many front-end developers.
-    </p>
+    <head>
+        <title>Front-End Web Development: The Big Nerd Ranch Guide!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheets/github.css" />
+    </head>
+    <body>
+        <!--=====================================================================-->
+        <h1>
+            Reference 
+        </h1>
+        
+        <tip>HTML</tip> for displaying multi-line and inline code samples in a web page. 
         <ul>
             <li>
-				Your <code>index.html</code> file will hold your HTML code. 
+                The &lt;pre&gt; tag renders text exactly as written in the HTML source code.
             </li>
             <li>
-				Your <code>stylesheets</code> folder will hold one or more files with styling information. Give your CSS files names that describe what part of the page or site they pertain to, such as <code>stylesheets/header.css</code> or <code>stylesheets/blog.css</code>. 
+                The &lt;code&gt; defines a piece of computer code.
+            </li>
+            <li>
+                In the CSS the <i>&lt;code&gt;</i> tag selector and the <i>white-space</i> property provide options to deal with whitespace imbedded in the HTML source. 
+            </li>
+            <li>
+                The &amp;nbsp inserts non-breaking white space to indent.
+            </li>
+            <ul>
+                <li>This HTML source code<br>
+                    <b>&lt;pre&gt;&lt;code&gt;</b> some code <b>&lt;br&gt;</b> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&amp;nbsp&amp;nbsp</b> more code;<br>
+                    ...<br>
+                    <b>&lt;/code&gt;&lt;/pre&gt;</b> 
+                </li>
+                <li>is rendered as follows;
+                    <pre><code>some code<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;more code...<br>
+                    ...</code></pre> 
+                <li>This HTML source code; some text <b>&lt;code&gt;</b> some code <b>&lt;/code&gt;</b> more text ...
+                </li>
+                <li>is rendered as; some text <code>some code</code> more text ...
+                </li>
+            </ul> 
+        </ul>
+        <netb>NetBeans</netb>: To Run Your Page: If your page needs the HTTP protocol (for example making AJAX calls), you need to have Apache serve up your web page. To do this,
+        <ul>
+            <li>
+                Right click anywhere in the editor pane and select Run (not View). The first time you run a page, there is a slight delay while NetBeans deploys your web application.
+            </li>
+            <li>
+                Notice the difference in the URL it shows localhost as your domain, not just the file name as before when you Viewed your page.
+            </li>
+            <li>
+                8080 is the port number that the web server uses to listen for web page requests.
             </li>
         </ul>
-	<p>Image tags are different from most other element in that they do not wrap other elements, but instead refer to a resource. When the brower encoutners an <code>img</code> tag, it draw the image to the page. This is know as a <i>replaced element</i>. Becuase they do not wrap content or other elements, they do no have a corresponding closing tag. Thie makes them <i>self-closing</i> tags (also known as <i>void</i> tags. You will sometimes see self-closing tags written with a slash before the right angle-bracket, like <code>img src="otter.jpg"/></code>.
-    <!-- -------------------------------------------------------------------- -->
-    <h1>
-		HTML and CSS concepts courtesy of:
-	</h1>
-    <h2>
-		Front-End Web Development: The Big Nerd Ranch Guide
-	</h2>
-		by Chris Aquino, Todd Gandee<br>
-		Copyright © 2016 Big Nerd Ranch, LLC<br>
-		<a href="http://www.informit.com/store/front-end-web-development-the-big-nerd-ranch-guide-9780134433943"
-			alt"Big Nerd Book>
-			http://www.informit.com/store/front-end-web-development-the-big-nerd-ranch-guide-9780134433943
-		</a>
-	<h2>
-		Temple University CIS 3308: Web Application Development
-	</h2>
-		Sally Kyvernitis Temple University Faculty<br>
-		<a href="http://cis-linux2.temple.edu/~sallyk/cis3308/index.php" alt="sallyk">
-			http://cis-linux2.temple.edu/~sallyk/cis3308/index.php
-		</a>
-</body>
+        <netb>NetBeans</netb>: To test Web APIs: Later in this course, you will be writing Server Side code that responds to JavaScript requests from your web pages. We will use JSP pages for this. Test that your installation can run JSP pages, so that if there is a problem you have more time to fix it.
+        <ul>
+            <li>
+                Right click on the "Web Pages" folder (in the project pane) and select New - JSP
+            </li>
+            <li>
+                You can accept the default file name of "newjsp". Double click newjsp to open it in the editor.
+            </li>
+            <li>
+                Run the page by right clicking anywhere in the editor area and selecting Run. If you see newjsp.jsp in the browser's address bar and "Hello World" displaying, then you have properly installed the NetBeans bundle and you will be able to write Web APIs later in the semester.
+            </li>
+        </ul>
+        </li>
+        <!--=====================================================================-->
+        <h1>
+            Chapter 1 Setting Up Your Development Environment
+        </h1>
+        <h2>
+            Installing <i>Node.js</i> and <i>browser-sync</i>
+        </h2>
+            <i>Node.js</i> (or simply "<i>Node</i>") lets you use programs written in JavaScript from the command
+            line. Most front-end development tools are written for use with <i>Node.js</i>. It provides two command-line
+            programs:
+            <ul>
+                <li>
+                    The <i>node</i> program does the work of running programs written in JavaScript.
+                </li>
+                <li>
+                    The Node Package Manager, <i>npm</i>, is needed for installing open-source development tools from the internet. <i>browser-sync</i> is a JavaScript tool that automatically reloads the browser when you save changes to your code. Install <i>browser-sync</i> using this command at the command line:<br>
+                        <code>npm install -g browser-sync</code><br> 
+                        Navigate to you project directory, and run the following command to start <i>browser-sync</i>.<br>
+                    <code>browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html"</code>
+                </li>
+            </ul>
+        <!--=====================================================================-->
+        <h1>
+            Chapter 2 Setting Up Your First Project
+        </h1>
+        <h2>
+            Setting Up Ottergram
+        </h2>
+        <p>
+            There are no rules about how to structure or name your files and folders. However, projects follow some conventions used by many front-end developers.
+        </p>
+        <ul>
+            <li>
+                Your <i>index.html</i> file will hold your HTML code.
+            </li>
+            <li>
+                Your <i>./stylesheets</i> folder will hold one or more files with styling information. Give your CSS files names that describe what part of the page or site they pertain to, such as <i>./stylesheets/github.css</i>.
+            </li>
+        </ul>
+        <h2>
+            Anatomy of a tag
+        </h2>
+        <p>
+            Paired tags have both open(<>) and closing (< />) tag and it is mandatory to close the tag.
+        </p>           
+        <p>
+            Self-closing tags do not wrap content, but instead refer to a resource. For instance when the browser encounters a <i>img</i> tag, it draws the image to the page. This is know as a <i>replaced element</i>. Because they do not wrap content or other elements, they do not have a corresponding closing tag. You will sometimes see self-closing tags written with a slash before the right angle-bracket.
+        </p>
+        <!--=====================================================================-->
+        <h1>
+            Chapter 3 Styles
+        </h1>
+        <h2>
+            Creating a style sheet baseline
+        </h2>
+        <p>
+            All browsers come with a set of default styles, but the defaults are different from browser to browser. The browser reads the styles in orderstarting with the first linked style sheet. For example the browser reads the  <i>"normalize.min.css"</i> before it reads <i>"your-style-sheet"</i> and so on. Finally the browser provides a default stylesheet, call the <i>user agent (UA)</i> stylesheet. Styles that you specify override the defaults.
+        </p>
+        <pre><code>&lt;!doctype html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="https://cdnjs.../normalize.min.css"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="stylesheets/your-style-sheet.css"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* user agent "stylesheet" */<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+        &lt;body&gt;<br>
+        ...</code></pre>
+        <h2>
+            Anatomy of a Style
+        </h2>
+        <p>
+            When you create individual style, you do so by writing styling rules, which consist of two main parts: <i>selectors</i> and <i>declarations</i>.
+        </p>
+        <img src="selector.gif"/>
+        <p>
+            The first part of a styling rule is one or more selectors. Selectors are not limited to tag names. You will rarely use element selectors in your stylesheets becuase you will not often want ot apply the exact same styles to every occurrence of a particular tag. You write selectors that apply to more targeted set of elements by increasing the selector's <i>specificity</i>. For example you can write selectors based on attributes. Selectors based on attributes are more specific than selectors based on element names. If a stylesheet contains multiple styles that could apply to the same element, the styles with a selector of higher specificity will be used instead of styles whose selector has a lower specificity. 
+        <p>
+            <i>Class</i> attributes are a way to more specifically identify a group of HTML elements, usually for styling. For example, &lt;span class="thumbnail-title"&gt;.
+        </p>
+        <h2>
+            Style Inheritance
+        </h2>
+        <p>
+            The following selector would match any <i>element-selector(s)</i> (e.g. &lt;code&gt; anchor) with a <i> attribute-selector</i> (i.e. white-space) that has a value of <i>#</i>. You can also use attribute selectors, with or without values, on their own.
+        </p>
+        <pre><code>element-selector(s) [ attribute-selector = "#" ] {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;/* style declaration */<br>
+        }</code></pre>
+        <p>
+            The text between the <code>/* */</code> indicators is a CSS <i>comment</i>. Code comments are ignored by the browser; they allow the developer to make notes in the code for future reference.
+        </p>
+        <h2>
+            The box model
+        </h2>
+        <p>
+            All HTML elements can be considered as boxes. The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. 
+        </p>
+        <img src="box-model.png">
+        <!--=====================================================================-->
+        <h1 id="sources">
+            Citations:
+        </h1>
+        <h2>
+            Front-End Web Development: The Big Nerd Ranch Guide
+        </h2>
+        Chris Aquino, Todd Gandee<br>
+        Copyright © 2016 Big Nerd Ranch, LLC<br>
+        <a href="http://www.informit.com/store/front-end-web-development-the-big-nerd-ranch-guide-9780134433943" alt="Big Nerd Book">
+            http://www.informit.com/store/front-end-web-development-the-big-nerd-ranch-guide-9780134433943
+        </a>
+        <h2>
+            Temple University CIS 3308: Web Application Development
+        </h2>
+        Sally Kyvernitis Temple University Faculty<br>
+        <a href="http://cis-linux2.temple.edu/~sallyk/tutorials_webDesign/index.php" alt="sallyk">
+            http://cis-linux2.temple.edu/~sallyk/tutorials_webDesign/index.php
+        </a>
+    </body>
 </html>

@@ -366,21 +366,41 @@ span.float-right > span {
   text-align: right;
 }
 
-code, tt {
+code {
+  font-family: Courier, sans-serif;
   margin: 0 2px;
   padding: 0 5px;
+  border-radius: 4px;
+  color: black;
+  background-color: lightgray;
+  font-size: small;
   white-space: nowrap;
+}
+
+code, tt {
+  font-family: Courier, sans-serif;
+  margin: 0 2px;
+  padding: 0 5px;
   border: 1px solid #eaeaea;
   background-color: #f8f8f8;
   border-radius: 3px;
+  white-space: nowrap;
 }
 
 pre code {
+  font-family: Courier, sans-serif;
   margin: 0;
   padding: 0;
-  white-space: pre;
   border: none;
   background: transparent;
+  white-space: nowrap;
+}
+
+pre code, pre tt {
+  font-family: Courier, sans-serif;
+  background-color: transparent;
+  border: none;
+  white-space: nowrap;
 }
 
 .highlight pre {
@@ -403,7 +423,23 @@ pre {
   border-radius: 3px;
 }
 
-pre code, pre tt {
-  background-color: transparent;
-  border: none;
+netb {
+  font-family: Helvetica, arial, sans-serif;
+  margin: 0 2px;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: rgb(64, 224, 208); /* turquoise */
+  background-color: rgb(148, 0, 211); /* dark violet */
+  font-size: small;
 }
+
+tip {
+    font-family: Helvetica, arial, sans-serif;
+    margin: 0 2px;
+    padding: 0 6px;
+    border-radius: 4px;
+    color: rgb(255, 255, 0); /* yellow */
+    background-color: rgb(0, 128, 0); /* green */
+    font-size: small;
+  }
+  
