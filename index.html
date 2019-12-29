@@ -9,67 +9,6 @@
     <body>
         <!--=====================================================================-->
         <h1>
-            Reference 
-        </h1>
-        
-        <tip>HTML</tip> for displaying multi-line and inline code samples in a web page. 
-        <ul>
-            <li>
-                The &lt;pre&gt; tag renders text exactly as written in the HTML source code.
-            </li>
-            <li>
-                The &lt;code&gt; defines a piece of computer code.
-            </li>
-            <li>
-                In the CSS the <i>&lt;code&gt;</i> tag selector and the <i>white-space</i> property provide options to deal with whitespace imbedded in the HTML source. 
-            </li>
-            <li>
-                The &amp;nbsp inserts non-breaking white space to indent.
-            </li>
-            <ul>
-                <li>This HTML source code<br>
-                    <b>&lt;pre&gt;&lt;code&gt;</b> some code <b>&lt;br&gt;</b> <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&amp;nbsp&amp;nbsp</b> more code;<br>
-                    ...<br>
-                    <b>&lt;/code&gt;&lt;/pre&gt;</b> 
-                </li>
-                <li>is rendered as follows;
-                    <pre><code>some code<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;more code...<br>
-                    ...</code></pre> 
-                <li>This HTML source code; some text <b>&lt;code&gt;</b> some code <b>&lt;/code&gt;</b> more text ...
-                </li>
-                <li>is rendered as; some text <code>some code</code> more text ...
-                </li>
-            </ul> 
-        </ul>
-        <netb>NetBeans</netb>: To Run Your Page: If your page needs the HTTP protocol (for example making AJAX calls), you need to have Apache serve up your web page. To do this,
-        <ul>
-            <li>
-                Right click anywhere in the editor pane and select Run (not View). The first time you run a page, there is a slight delay while NetBeans deploys your web application.
-            </li>
-            <li>
-                Notice the difference in the URL it shows localhost as your domain, not just the file name as before when you Viewed your page.
-            </li>
-            <li>
-                8080 is the port number that the web server uses to listen for web page requests.
-            </li>
-        </ul>
-        <netb>NetBeans</netb>: To test Web APIs: Later in this course, you will be writing Server Side code that responds to JavaScript requests from your web pages. We will use JSP pages for this. Test that your installation can run JSP pages, so that if there is a problem you have more time to fix it.
-        <ul>
-            <li>
-                Right click on the "Web Pages" folder (in the project pane) and select New - JSP
-            </li>
-            <li>
-                You can accept the default file name of "newjsp". Double click newjsp to open it in the editor.
-            </li>
-            <li>
-                Run the page by right clicking anywhere in the editor area and selecting Run. If you see newjsp.jsp in the browser's address bar and "Hello World" displaying, then you have properly installed the NetBeans bundle and you will be able to write Web APIs later in the semester.
-            </li>
-        </ul>
-        </li>
-        <!--=====================================================================-->
-        <h1>
             Chapter 1 Setting Up Your Development Environment
         </h1>
         <h2>
@@ -167,10 +106,7 @@
             Class Selectors
         </h3>
         <p>
-            To use a <i>class</i> as a selector in a styling rule, you prefix the class name with a dot (period). Call selectors are favorable over other kinds of selectors. You can write very descriptive class names that make you code easy to develop and maintain. Also, you can add multiple class names to an element.
-        </p>
-        <p>
-            In the the HTML source <code>&lt;span class="class-name"&gt;</code> selects the following styling rule in the CSS stylesheets;
+            To use a <i>class</i> as a selector in a styling rule, you prefix the class name with a dot (period). Call selectors are favorable over other kinds of selectors. You can write very descriptive class names that make you code easy to develop and maintain. Also, you can add multiple class names to an element. In the the HTML source <code>&lt;span class="class-name"&gt;</code> selects the following styling rule in the CSS stylesheets;
         </p>
             <pre><code>.class-name {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, arial, sans-serif;<br>
@@ -188,6 +124,69 @@
             All HTML elements can be considered as boxes. The CSS box model is essentially a box that wraps around every block level HTML element. It consists of margins, borders, padding, and the actual content. 
         </p>
         <img src="box-model.png">
+        <!--=====================================================================-->
+        <h1>
+            Appendix
+        </h1>
+        <h2>
+            Tips, notes, etc...
+        </h2>
+        <tip>HTML</tip> for displaying multi-line and inline code samples in a web page. 
+        <ul>
+            <li>
+                The &lt;pre&gt; tag renders text exactly as written in the HTML source code.
+            </li>
+            <li>
+                The &lt;code&gt; defines a piece of computer code.
+            </li>
+            <li>
+                In the CSS the <i>&lt;code&gt;</i> tag selector and the <i>white-space</i> property provide options to deal with whitespace imbedded in the HTML source. 
+            </li>
+            <li>
+                The &amp;nbsp inserts non-breaking white space to indent.
+            </li>
+            <ul>
+                <li>This HTML source code<br>
+                    <b>&lt;pre&gt;&lt;code&gt;</b> some code <b>&lt;br&gt;</b> <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&amp;nbsp&amp;nbsp</b> more code;<br>
+                    ...<br>
+                    <b>&lt;/code&gt;&lt;/pre&gt;</b> 
+                </li>
+                <li>is rendered as follows;
+                    <pre><code>some code<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;more code...<br>
+                    ...</code></pre> 
+                <li>This HTML source code; some text <b>&lt;code&gt;</b> some code <b>&lt;/code&gt;</b> more text ...
+                </li>
+                <li>is rendered as; some text <code>some code</code> more text ...
+                </li>
+            </ul> 
+        </ul>
+        <netb>NetBeans</netb>: To Run Your Page: If your page needs the HTTP protocol (for example making AJAX calls), you need to have Apache serve up your web page. To do this,
+        <ul>
+            <li>
+                Right click anywhere in the editor pane and select Run (not View). The first time you run a page, there is a slight delay while NetBeans deploys your web application.
+            </li>
+            <li>
+                Notice the difference in the URL it shows localhost as your domain, not just the file name as before when you Viewed your page.
+            </li>
+            <li>
+                8080 is the port number that the web server uses to listen for web page requests.
+            </li>
+        </ul>
+        <netb>NetBeans</netb>: To test Web APIs: Later in this course, you will be writing Server Side code that responds to JavaScript requests from your web pages. We will use JSP pages for this. Test that your installation can run JSP pages, so that if there is a problem you have more time to fix it.
+        <ul>
+            <li>
+                Right click on the "Web Pages" folder (in the project pane) and select New - JSP
+            </li>
+            <li>
+                You can accept the default file name of "newjsp". Double click newjsp to open it in the editor.
+            </li>
+            <li>
+                Run the page by right clicking anywhere in the editor area and selecting Run. If you see newjsp.jsp in the browser's address bar and "Hello World" displaying, then you have properly installed the NetBeans bundle and you will be able to write Web APIs later in the semester.
+            </li>
+        </ul>
+        </li>
         <!--=====================================================================-->
         <h1 id="sources">
             Citations:
