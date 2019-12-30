@@ -186,6 +186,10 @@ ul :last-child, ol :last-child {
   margin-bottom: 0;
 }
 
+.unordered-list {
+    list-style: none;
+}
+
 dl {
   padding: 0;
 }
@@ -423,7 +427,7 @@ pre {
   border-radius: 3px;
 }
 
-netb {
+.netbeans-tip {
   font-family: Helvetica, arial, sans-serif;
   margin: 0 2px;
   padding: 0 5px;
@@ -433,7 +437,7 @@ netb {
   font-size: small;
 }
 
-tip {
+.html-tip {
     font-family: Helvetica, arial, sans-serif;
     margin: 0 2px;
     padding: 0 6px;
@@ -442,4 +446,39 @@ tip {
     background-color: rgb(0, 128, 0); /* green */
     font-size: small;
   }
-  
+ 
+.vscode-tip {
+font-family: Helvetica, arial, sans-serif;
+margin: 0 2px;
+padding: 0 6px;
+border-radius: 4px;
+color: rgb(0,255,0); /* green */
+background-color: rgb(200, 0, 200); /* violet */
+font-size: small;
+}
+
+.thumbnail-image {
+    border: 1px solid rgb(64,64,64); /* light gray */ 
+    width: 30%
+}
+
+/* Color Theme Swatches in RGBA 
+.Glowing-Blue-1-rgba { color: rgba(35, 10, 89, 1); }
+.Glowing-Blue-2-rgba { color: rgba(62, 56, 242, 1); }
+.Glowing-Blue-3-rgba { color: rgba(0, 41, 250, 1); }
+.Glowing-Blue-4-rgba { color: rgba(92, 115, 242, 1); }
+.Glowing-Blue-5-rgba { color: rgba(130, 159, 217, 1); } 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,6 +11,7 @@
         <h1>
             Chapter 1 Setting Up Your Development Environment
         </h1>
+        <!--=====================================================================-->
         <h2>
             Installing <i>Node.js</i> and <i>browser-sync</i>
         </h2>
@@ -32,7 +33,8 @@
         <h1>
             Chapter 2 Setting Up Your First Project
         </h1>
-        <h2>
+        <!--=====================================================================-->
+           <h2>
             Setting Up Ottergram
         </h2>
         <p>
@@ -59,6 +61,7 @@
         <h1>
             Chapter 3 Styles
         </h1>
+        <!--=====================================================================-->
         <h2>
             Creating a style sheet baseline
         </h2>
@@ -106,7 +109,7 @@
             Class Selectors
         </h3>
         <p>
-            To use a <i>class</i> as a selector in a styling rule, you prefix the class name with a dot (period). Call selectors are favorable over other kinds of selectors. You can write very descriptive class names that make you code easy to develop and maintain. Also, you can add multiple class names to an element. In the the HTML source <code>&lt;span class="class-name"&gt;</code> selects the following styling rule in the CSS stylesheets;
+            To use a <i>class</i> as a selector in a styling rule, you prefix the class name with a dot (period). Class selectors are favorable over other kinds of selectors. You can write very descriptive class names that make you code easy to develop and maintain. Also, you can add multiple class names to an element. In the the HTML source <code>&lt;span class="class-name"&gt;</code> selects the following styling rule in the CSS stylesheets;
         </p>
             <pre><code>.class-name {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, arial, sans-serif;<br>
@@ -124,14 +127,35 @@
             All HTML elements can be considered as boxes. The CSS box model is essentially a box that wraps around every block level HTML element. It consists of margins, borders, padding, and the actual content. 
         </p>
         <img src="box-model.png">
+        <h2>
+            Relationship Combinators 
+        </h2>
+        <p>
+            A combinator is something that explains the relationship between the selectors. A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+        </p>
+        <ul class="unordered-list">
+            <li>
+                <b>(space)</b> The descendant selector matches all elements that are descendants of a specified element.
+            </li>
+            <li>
+                <b>></b> The child selector selects all elements that are the children of a specified element.
+            </li>
+            <li>
+                <b>~</b> The general sibling selector selects all elements that are siblings of a specified element.
+            </li>
+            <li>
+                <b>+</b> The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element. Sibling elements must have the same parent element, and "adjacent" means "immediately following".
+            </li>
+        </ul>
         <!--=====================================================================-->
         <h1>
             Appendix
         </h1>
+        <!--=====================================================================-->
         <h2>
             Tips, notes, etc...
         </h2>
-        <tip>HTML</tip> for displaying multi-line and inline code samples in a web page. 
+        <span class="html-tip">HTML</span> for displaying multi-line and inline code samples in a web page. 
         <ul>
             <li>
                 The &lt;pre&gt; tag renders text exactly as written in the HTML source code.
@@ -140,14 +164,14 @@
                 The &lt;code&gt; defines a piece of computer code.
             </li>
             <li>
-                In the CSS the <i>&lt;code&gt;</i> tag selector and the <i>white-space</i> property provide options to deal with whitespace imbedded in the HTML source. 
+                In the CSS the <i>&lt;code&gt;</i> tag selector and the <i>white-space</i> property provide options to deal with <i>leading</i> whitespace imbedded in the HTML source for readability (i.e. indent white-space I <b>DON'T</b> want in the preformat).
             </li>
             <li>
-                The &amp;nbsp inserts non-breaking white space to indent.
+                The &amp;nbsp inserts non-breaking white space to indent (i.e. shellindent white-space I <b>DO</b> want rendered).
             </li>
             <ul>
                 <li>This HTML source code<br>
-                    <b>&lt;pre&gt;&lt;code&gt;</b> some code <b>&lt;br&gt;</b> <br>
+                    <b>&lt;pre&gt;&lt;code&gt;</b> some code <b>&lt;br&gt;</b><br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&amp;nbsp&amp;nbsp</b> more code;<br>
                     ...<br>
                     <b>&lt;/code&gt;&lt;/pre&gt;</b> 
@@ -156,13 +180,13 @@
                     <pre><code>some code<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;more code...<br>
                     ...</code></pre> 
-                <li>This HTML source code; some text <b>&lt;code&gt;</b> some code <b>&lt;/code&gt;</b> more text ...
-                </li>
-                <li>is rendered as; some text <code>some code</code> more text ...
+                <li>This HTML source code; "some text <b>&lt;code&gt;</b> some code <b>&lt;/code&gt;</b> more text ..." is rendered as "some text <code>some code</code> more text ...". 
                 </li>
             </ul> 
         </ul>
-        <netb>NetBeans</netb>: To Run Your Page: If your page needs the HTTP protocol (for example making AJAX calls), you need to have Apache serve up your web page. To do this,
+        <p>
+            <span class="netbeans-tip">NetBeans</span>: To Run Your Page: If your page needs the HTTP protocol (for example making AJAX calls), you need to have Apache serve up your web page. To do this,
+        </p>
         <ul>
             <li>
                 Right click anywhere in the editor pane and select Run (not View). The first time you run a page, there is a slight delay while NetBeans deploys your web application.
@@ -174,7 +198,9 @@
                 8080 is the port number that the web server uses to listen for web page requests.
             </li>
         </ul>
-        <netb>NetBeans</netb>: To test Web APIs: Later in this course, you will be writing Server Side code that responds to JavaScript requests from your web pages. We will use JSP pages for this. Test that your installation can run JSP pages, so that if there is a problem you have more time to fix it.
+        <p>
+            <span class="netbeans-tip">NetBeans</span>: To test Web APIs: Later in this course, you will be writing Server Side code that responds to JavaScript requests from your web pages. We will use JSP pages for this. Test that your installation can run JSP pages, so that if there is a problem you have more time to fix it.
+        </p>
         <ul>
             <li>
                 Right click on the "Web Pages" folder (in the project pane) and select New - JSP
@@ -186,18 +212,42 @@
                 Run the page by right clicking anywhere in the editor area and selecting Run. If you see newjsp.jsp in the browser's address bar and "Hello World" displaying, then you have properly installed the NetBeans bundle and you will be able to write Web APIs later in the semester.
             </li>
         </ul>
-        </li>
-        <!--=====================================================================-->
+        <span class="vscode-tip">VSCode</span>
+            <ul>
+                <li>
+                    <a href="https://stackoverflow.com/questions/43427631/how-to-add-multiple-terminals-in-vs-code">
+                        How to add multiple terminals in Visual Studio Code.
+                    </a>
+                </li>
+            </ul>
+        <h2>
+            Color Reference Charts
+        </h2>
+        <ul>
+            <li>
+                For help selecting pleasing color palettes, Adobe provides a free online tool at <a href="https://color.adobe.com/create">color.adobe.com</a>.
+            </li>
+        </ul>
+
+        </p>
+        <p>
+            <img class="thumbnail-image" src="rgb-color-wheel.jpg"/>
+        </p>
+        <p>
+            <img class="thumbnail-image" src="color-schemes-101.jpg"/>
+        </p>
+        <!--=================================================================-->
         <h1 id="sources">
             Citations:
         </h1>
+        <!--=================================================================-->
         <h2>
             Front-End Web Development: The Big Nerd Ranch Guide
         </h2>
         Chris Aquino, Todd Gandee<br>
         Copyright © 2016 Big Nerd Ranch, LLC<br>
-        <a href="http://www.informit.com/store/front-end-web-development-the-big-nerd-ranch-guide-9780134433943" alt="Big Nerd Book">
-            http://www.informit.com/store/front-end-web-development-the-big-nerd-ranch-guide-9780134433943
+        <a href="https://www.bignerdranch.com/books/front-end-web-development-the-big-nerd-ranch-guide/" alt="Big Nerd Book">
+            https://www.bignerdranch.com/books/front-end-web-development-the-big-nerd-ranch-guide/
         </a>
         <h2>
             Temple University CIS 3308: Web Application Development
