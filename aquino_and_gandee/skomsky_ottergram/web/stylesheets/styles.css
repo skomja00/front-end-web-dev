@@ -7,6 +7,17 @@ and open the template in the editor.
     Created on : Dec 25, 2019, 6:01:03 PM
     Author     : admin
 */
+@font-face {
+    font-family: 'lakeshore';
+    src: url('fonts/LAKESHOR-webfont.eot');
+    src: url('fonts/LAKESHOR-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LAKESHOR-webfont.woff') format('woff'),
+         url('fonts/LAKESHOR-webfont.ttf') format('truetype'),
+         url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    
+}
 body {
     font-size: 10px;
     background: rgb (130, 159, 217, 1); /* fallback */
@@ -16,7 +27,7 @@ a {
     text-decoration: none; // <li> display: block; removes bullets!
 }
 .logo-text {
-    background: white;
+    font-family: lakeshore;
     text-align: center;
     text-transform: uppercase;
     font-size: 37px;
