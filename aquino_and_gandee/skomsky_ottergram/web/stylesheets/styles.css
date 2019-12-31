@@ -38,17 +38,26 @@ a {
     margin-top: 10px;
 }
 .thumbnail-list {
-    list-style: circle;
+    white-space: nowrap;
+    overflow-x: auto;
+    list-style: none;
     padding: 0;
+    
 }
 .thumbnail-item {
-                                          /* opactity                         */ 
+    display: inline-block;
+/*  value=block
+    description:displays an element as a block element (like <p>). 
+                line break before and after the element, 
+                and takes up the whole width
+    value=inline-block
+    description:the element's box is drawn same as 'block' but without the 
+                before/after <br>'s*/
+
+                       /*   r,  g,  b, a     a=opactity                       */ 
     border: 1px solid rgb (35, 10, 89, 1);/* all browsers see this - fallback */
     border: 1px solid rgba(35, 10, 89, 1);/* if not supported this is ignored */
-    display: block;
-/*  value=block
-    description=displays an element as a block element (like <p>). 
-                it starts on a new line, and takes up the whole width*/
+    width: 120px;
 }
 .thumbnail-img {
     width: 33%;
@@ -62,6 +71,9 @@ a {
     color: rgba(130, 159, 217, 1);
     border-radius: 0px;
     font-size: 18px;
+}
+.detail-image {
+    width: 90%
 }
 
 /* Color Theme Swatches in RGBA  darkest top to lightest bottom

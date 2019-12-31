@@ -186,7 +186,7 @@ ul :last-child, ol :last-child {
   margin-bottom: 0;
 }
 
-.unordered-list {
+.ulist-list-style-none {
     list-style: none;
 }
 
@@ -425,7 +425,7 @@ pre {
   overflow: auto;
   padding: 6px 10px;
   border-radius: 3px;
-}
+} 
 
 .netbeans-tip {
   font-family: Helvetica, arial, sans-serif;
@@ -448,18 +448,46 @@ pre {
   }
  
 .vscode-tip {
-font-family: Helvetica, arial, sans-serif;
-margin: 0 2px;
-padding: 0 6px;
-border-radius: 4px;
-color: rgb(0,255,0); /* green */
-background-color: rgb(200, 0, 200); /* violet */
-font-size: small;
+    font-family: Helvetica, arial, sans-serif;
+    margin: 0 2px;
+    padding: 0 6px;
+    border-radius: 4px;
+    color: rgb(0,255,0); /* green */
+    background-color: rgb(200, 0, 200); /* violet */
+    font-size: small;
 }
 
-.thumbnail-image {
+a {
+    text-decoration: none; /* <li> display: block; removes bullets! */
+}
+
+.ul-list {
+    white-space: nowrap;
+    overflow-x: auto;
+    list-style: none;
+    padding: 0;
+
+}
+
+.ul-list-item {
+    display: inline-block;
     border: 1px solid rgb(64,64,64); /* light gray */ 
-    width: 30%
+    width: 40%;
+    height: 40%;
+ }
+
+.ul-list-item-image {
+    border: 1px solid rgb(64,64,64); /* light gray */ 
+}
+
+.ul-list-item-title {
+    display: block; 
+    margin: 0;
+    padding: 4px 10px;
+    background-color: rgba(128,128,128,1); /* lighter gray */
+    color: rgba(0,0,0,1); /* black */
+    border-radius: 0px;
+ 
 }
 
 /* Color Theme Swatches in RGBA 

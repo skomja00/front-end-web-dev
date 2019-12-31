@@ -15,7 +15,7 @@
         <h2>
             Installing <i>Node.js</i> and <i>browser-sync</i>
         </h2>
-            <i>Node.js</i> (or simply "<i>Node</i>") lets you use programs written in JavaScript from the command
+            <i>Node.js</i> (or simply "<i>Node</i>") is a platform for network applications, and lets you use programs written in JavaScript from the command
             line. Most front-end development tools are written for use with <i>Node.js</i>. It provides two command-line
             programs:
             <ul>
@@ -23,10 +23,17 @@
                     The <i>node</i> program does the work of running programs written in JavaScript.
                 </li>
                 <li>
-                    The Node Package Manager, <i>npm</i>, is needed for installing open-source development tools from the internet. <i>browser-sync</i> is a JavaScript tool that automatically reloads the browser when you save changes to your code. Install <i>browser-sync</i> using this command at the command line:<br>
-                        <code>npm install -g browser-sync</code><br> 
-                        Navigate to you project directory, and run the following command to start <i>browser-sync</i>.<br>
-                    <code>browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html"</code>
+                    The Node Package Manager, <i>npm</i>, is needed for installing open-source development tools from the internet. <i>browser-sync</i> is a JavaScript tool that automatically reloads the browser when you save changes to your code. Install <i>browser-sync</i> using this command at the command line:<br> <code>npm install -g browser-sync</code><br> 
+                    <ul>
+                        <li>
+                            Static sites<br>A basic use is to watch all files (i.e. index.html, CSS stylesheets) directory and update connected browsers if a change occurs. Navigate your terminal window to a project folder and run the appropriate command to start <i>browser-sync</i>.<br>
+                            <code>browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html"</code>
+                        </li>
+                        <li>
+                            Dynamic sites<br> If you’re running a local server with PHP or similar, you’ll need to use the proxy mode. Browsersync will wrap your vhost with a proxy URL to view your site.<br>
+                            <code>browser-sync start --proxy "myproject.dev" --files "css/*.css"</code>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         <!--=====================================================================-->
@@ -55,7 +62,7 @@
             Paired tags have both open(<>) and closing (< />) tag and it is mandatory to close the tag.
         </p>           
         <p>
-            Self-closing tags do not wrap content, but instead refer to a resource. For instance when the browser encounters a <i>img</i> tag, it draws the image to the page. This is know as a <i>replaced element</i>. Because they do not wrap content or other elements, they do not have a corresponding closing tag. You will sometimes see self-closing tags written with a slash before the right angle-bracket.
+            Self-closing tags do not wrap content, but instead refer to a resource. For instance when the browser encounters a &lt;img&gt; tag, it draws the image to the page. This is know as a <i>replaced element</i>. Because they do not wrap content or other elements, they do not have a corresponding closing tag. You will sometimes see self-closing tags written with a slash before the right angle-bracket.
         </p>
         <!--=====================================================================-->
         <h1>
@@ -133,7 +140,7 @@
         <p>
             A combinator is something that explains the relationship between the selectors. A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
         </p>
-        <ul class="unordered-list">
+        <ul class="ulist-list-style-none">
             <li>
                 <b>(space)</b> The descendant selector matches all elements that are descendants of a specified element.
             </li>
@@ -149,19 +156,45 @@
         </ul>
         <!--=====================================================================-->
         <h1>
+            Chapter 4
+        </h1>
+        <!--=====================================================================-->
+        <h2>
+            Responsive Layouts
+        </h2>        
+        <!--=====================================================================-->
+        <p>
+            For a horizontally scrolling list, each item should be laid out horizontally on a single line with a scrollbar along the horizontal space to accommodate content that overflows. Without this declaration, you would have to scroll the entire web page to see the additional list item elements.
+        </p>
+        <p>
+            <pre><code>.ul-list {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;white-space: nowrap;&nbsp;/* declaration prevent the elements from wrapping */<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;overflow-x: auto;&nbsp;&nbsp;&nbsp;&nbsp;/* add a scrollbar along the horizontal space */<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;list-style: none;&nbsp;&nbsp;&nbsp;&nbsp;/* remove bullets or numbers from list items */<br>
+            </code></pre>            
+        </p>
+        <p>
+            The <b>&lt;li&gt;</b> style definition in the CSS will have to render the block without before and after line breaks.
+        </p>
+        <p>
+            <pre><code>.ul-list-item {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;&nbsp;/* <i>block</i> but without the line breaks */<br>
+            </code></pre>            
+        </p>
+        <h1>
             Appendix
         </h1>
         <!--=====================================================================-->
         <h2>
             Tips, notes, etc...
         </h2>
-        <span class="html-tip">HTML</span> for displaying multi-line and inline code samples in a web page. 
+        <span class="html-tip">html</span> for displaying multi-line and inline code samples in a web page. 
         <ul>
             <li>
                 The &lt;pre&gt; tag renders text exactly as written in the HTML source code.
             </li>
             <li>
-                The &lt;code&gt; defines a piece of computer code. Put a &lt;br&gt; at the end of each line of sample code.
+                The &lt;code&gt; defines a piece of computer code. Put a &lt;br&gt; at the end of each line of sample code - <code>display: block;</code> - to strip the leading and trailing &lt;br&gt; from the element.
             </li>
             <li>
                 In the CSS the <i>&lt;code&gt;</i> tag selector and the <i>white-space</i> property provide options to deal with <i>leading</i> whitespace imbedded in the HTML source for readability (i.e. indent white-space I <b>DON'T</b> want in the preformat).
@@ -221,21 +254,24 @@
                 </li>
             </ul>
         <h2>
-            Color Reference Charts
+            Color Reference Charts and Sites
         </h2>
-        <ul>
-            <li>
-                For help selecting pleasing color palettes, Adobe provides a free online tool at <a href="https://color.adobe.com/create">color.adobe.com</a>.
+        <ul class="ul-list">
+            <li class="ul-list-item">
+                <a href="http://color.adobe.com/" alt="color.adobe.com">
+                    <img class="thumbnail-image" src="color-adobe-com.png" alt=""/>
+                </a>
+                <span class="ul-list-item-title">color.adobe.com</span>
+            </li>
+            <li class="ul-list-item">
+                <img class="thumbnail-image" src="rgb-color-wheel.jpg" alt=""/>
+                <span class="ul-list-item-title">rgb color wheel</span>
+            </li>
+            <li class="ul-list-item">
+                <img class="thumbnail-image" src="color-schemes-101.jpg" alt=""/>
+                <span class="ul-list-item-title">color schemes 101</span>
             </li>
         </ul>
-
-        </p>
-        <p>
-            <img class="thumbnail-image" src="rgb-color-wheel.jpg"/>
-        </p>
-        <p>
-            <img class="thumbnail-image" src="color-schemes-101.jpg"/>
-        </p>
         <!--=================================================================-->
         <h1 id="sources">
             Citations:
