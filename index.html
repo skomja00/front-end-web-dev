@@ -118,6 +118,7 @@
         <p>
             To use a <i>class</i> as a selector in a styling rule, you prefix the class name with a dot (period). Class selectors are favorable over other kinds of selectors. You can write very descriptive class names that make you code easy to develop and maintain. Also, you can add multiple class names to an element. In the the HTML source <code>&lt;span class="class-name"&gt;</code> selects the following styling rule in the CSS stylesheets;
         </p>
+        <p>
             <pre><code>.class-name {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, arial, sans-serif;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;margin: 0 2px;<br>
@@ -127,6 +128,8 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;background-color: rgb(0, 128, 0); /* green */<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;font-size: small;<br>
             }</code></pre>
+        </p>
+
         <h2>
             The box model
         </h2>
@@ -154,6 +157,23 @@
                 <b>+</b> The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element. Sibling elements must have the same parent element, and "adjacent" means "immediately following". This results in the declared styles being applied to the 2nd through Nth - but not the 1st, because it is not "immediately following" an adjacent sibling. 
             </li>
         </ul>
+        <p>
+            Footnote: You can group selectors, separated by a comma in a styling rule. Selectors of any type can be combined in this way to set common styles. Notice also that you now have two styling rules with the body element selector. When the browser sees additional styling declarations for a selector, it simply adds to its existing styling information for that selector. 
+        </p>
+        <p>
+            <pre><code>@font-face {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                }<br>
+                html, body {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;height: 100%<br>
+                }<br>
+                body {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica, arial, sans-serif;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;font-size: 14px;<br>
+                }<br>
+                ...
+            </code></pre>
+        </p>
         <!--=====================================================================-->
         <h1>
             Chapter 4
@@ -181,6 +201,19 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;&nbsp;/* <i>block</i> but without the line breaks */<br>
             </code></pre>            
         </p>
+        <h2>
+            The flexbox model
+        </h2>
+        <p>
+            You have seen <i>display</i> styles specifiying the properties <i>block</i> and <i>inline</i>.
+        </p>
+        <p>
+            Block elements occupy their own horizontal line. Another way to think of this is that block elements flow from top to bottom. Block elements stack vertically. 
+        </p>
+        <p>
+            Inline elments flow from left to right. Inline elements line up horizontally.   
+        </p>
+        <!--=====================================================================-->
         <h1>
             Appendix
         </h1>
@@ -245,14 +278,10 @@
                 Run the page by right clicking anywhere in the editor area and selecting Run. If you see newjsp.jsp in the browser's address bar and "Hello World" displaying, then you have properly installed the NetBeans bundle and you will be able to write Web APIs later in the semester.
             </li>
         </ul>
-        <span class="vscode-tip">VSCode</span>
-            <ul>
-                <li>
-                    <a href="https://stackoverflow.com/questions/43427631/how-to-add-multiple-terminals-in-vs-code">
-                        How to add multiple terminals in Visual Studio Code.
-                    </a>
-                </li>
-            </ul>
+        <span class="vscode-tip">VSCode</span> 
+            <a href="https://stackoverflow.com/questions/43427631/how-to-add-multiple-terminals-in-vs-code">
+                How to add multiple terminals in Visual Studio Code.
+            </a>
         <h2>
             Color Reference Charts and Sites
         </h2>
