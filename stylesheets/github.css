@@ -472,8 +472,8 @@ a {
 .ul-list-item {
     display: inline-block;
     border: 1px solid rgb(64,64,64); /* light gray */ 
-    min-width: 240px; /* this will remove the variations in size */
-    max-width: 240px;
+    min-width: 20%; /* this will remove the variations in size */
+    max-width: 20%;
  }
 
 .ul-list-item-image {
