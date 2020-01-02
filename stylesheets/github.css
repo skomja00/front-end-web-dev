@@ -156,6 +156,8 @@ a {
 
 .list-item-image {
     border: 0px solid rgba(64, 64, 64, 1); /* light gray */ 
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
 .list-item-title {
@@ -164,8 +166,7 @@ a {
     padding: 0px 0px;
     background-color: rgba(128, 128, 128, 1); /* lighter gray */
     color: rgba(0, 0, 0, 1); /* black */
-    border-radius: 0px;
- 
+    border-radius: 0px; 
 }
 
 a:hover {
@@ -190,6 +191,13 @@ a > img:hover{
 a > span:hover {
     border: 0px;
 }
+/* also change image opacity on hover */
+.list-item-image:hover {
+    border: 0px solid rgba(64, 64, 64, 1); /* light gray */ 
+    opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
 
 /* Color Theme Swatches in RGBA 
 .Glowing-Blue-1-rgba { color: rgba(35, 10, 89, 1); }
