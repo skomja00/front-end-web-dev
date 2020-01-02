@@ -99,8 +99,8 @@ a {
 
 .detail-image-title {
     position: absolute; /* flexbox */
-    bottom: -16px; //435px;      /* flexbox */
-    left: 4px;         /* flexbox */
+    bottom: -16px;      /* flexbox */
+    left: 4px;          /* flexbox */
     color: white;
     font-size: 40px;
     text-shadow: rgba(0, 0, 0, .9) 4px 6px 9px;
@@ -110,7 +110,6 @@ a {
     width: 90%;
     opacity: 1;   
 }
-
 
 /* Color Theme Swatches in RGBA  darkest top to lightest bottom
 Glowing-Blue-1-rgba { color: rgba(35, 10, 89, 1); }
