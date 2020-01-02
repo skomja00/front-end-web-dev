@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="stylesheets/github.css" />
     </head>
-    <body>
+    <body id=ricepaper>
+        <div id="front-end-web-dev">
+            <h1>
+                HTML and CSS refresher...
+            </h1>
+        </div>
         <!--=====================================================================-->
         <h1>
             Chapter 1 Setting Up Your Development Environment
@@ -23,15 +28,15 @@
                     The <i>node</i> program does the work of running programs written in JavaScript.
                 </li>
                 <li>
-                    The Node Package Manager, <i>npm</i>, is needed for installing open-source development tools from the internet. <i>browser-sync</i> is a JavaScript tool that automatically reloads the browser when you save changes to your code. Install <i>browser-sync</i> using this command at the command line:<br> <code>npm install -g browser-sync</code><br> 
+                    The Node Package Manager, <i>npm</i>, is needed for installing open-source development tools from the internet. <i>browser-sync</i> is a JavaScript tool that automatically reloads the browser when you save changes to your code. Install <i>browser-sync</i> using this command at the command line:<br> <code class=inline-code>npm install -g browser-sync</code><br> 
                     <ul>
                         <li>
                             Static sites<br>A basic use is to watch all files (i.e. index.html, CSS stylesheets) directory and update connected browsers if a change occurs. Navigate your terminal window to a project folder and run the appropriate command to start <i>browser-sync</i>.<br>
-                            <code>browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html"</code>
+                            <code class=inline-code>browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html"</code>
                         </li>
                         <li>
                             Dynamic sites<br> If you’re running a local server with PHP or similar, you’ll need to use the proxy mode. Browsersync will wrap your vhost with a proxy URL to view your site.<br>
-                            <code>browser-sync start --proxy "myproject.dev" --files "css/*.css"</code>
+                            <code class=inline-code>browser-sync start --proxy "myproject.dev" --files "css/*.css"</code>
                         </li>
                     </ul>
                 </li>
@@ -110,13 +115,13 @@
             &nbsp;&nbsp;&nbsp;&nbsp;/* style declaration */<br>
         }</code></pre>
         <p>
-            The text between the <code>/* */</code> indicators is a CSS <i>comment</i>. Code comments are ignored by the browser; they allow the developer to make notes in the code for future reference.
+            The text between the <code class=inline-code>/* */</code> indicators is a CSS <i>comment</i>. Code comments are ignored by the browser; they allow the developer to make notes in the code for future reference.
         </p>
         <h3>
             Class Selectors
         </h3>
         <p>
-            To use a <i>class</i> as a selector in a styling rule, you prefix the class name with a dot (period). Class selectors are favorable over other kinds of selectors. You can write very descriptive class names that make you code easy to develop and maintain. Also, you can add multiple class names to an element. In the the HTML source <code>&lt;span class="class-name"&gt;</code> selects the following styling rule in the CSS stylesheets;
+            To use a <i>class</i> as a selector in a styling rule, you prefix the class name with a dot (period). Class selectors are favorable over other kinds of selectors. You can write very descriptive class names that make you code easy to develop and maintain. Also, you can add multiple class names to an element. In the the HTML source <code class=inline-code>&lt;span class="class-name"&gt;</code> selects the following styling rule in the CSS stylesheets;
         </p>
         <p>
             <pre><code>.class-name {<br>
@@ -187,7 +192,7 @@
             For a horizontally scrolling list, each item should be laid out horizontally on a single line with a scrollbar along the horizontal space to accommodate content that overflows. Without this declaration, you would have to scroll the entire web page to see the additional list item elements.
         </p>
         <p>
-            <pre><code>.ul-list {<br>
+            <pre><code>.list {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;white-space: nowrap;&nbsp;/* declaration prevent the elements from wrapping */<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;overflow-x: auto;&nbsp;&nbsp;&nbsp;&nbsp;/* add a scrollbar along the horizontal space */<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;list-style: none;&nbsp;&nbsp;&nbsp;&nbsp;/* remove bullets or numbers from list items */<br>
@@ -197,7 +202,7 @@
             The <b>&lt;li&gt;</b> style definition in the CSS will have to render the block without before and after line breaks.
         </p>
         <p>
-            <pre><code>.ul-list-item {<br>
+            <pre><code>.list-item {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;&nbsp;/* <i>block</i> but without the line breaks */<br>
             </code></pre>            
         </p>
@@ -227,13 +232,13 @@
                 The &lt;pre&gt; tag renders text exactly as written in the HTML source code.
             </li>
             <li>
-                The &lt;code&gt; defines a piece of computer code. Put a &lt;br&gt; at the end of each line of sample code - <code>display: block;</code> - to strip the leading and trailing &lt;br&gt; from the element.
+                The &lt;code&gt; defines a piece of computer code. Put a &lt;br&gt; at the end of each line of sample code - <code class=inline-code>display: block;</code> - to strip the leading and trailing &lt;br&gt; from the element.
             </li>
             <li>
-                In the CSS the <i>&lt;code&gt;</i> tag selector and the <i>white-space</i> property provide options to deal with <i>leading</i> whitespace imbedded in the HTML source for readability (i.e. indent white-space I <b>DON'T</b> want in the preformat).
+                In the CSS the <i>&lt;code&gt;</i> tag selector and the <i>white-space</i> property provide options to deal with <i>leading</i> whitespace imbedded in the HTML source for readability (i.e. indent white-space I <b><u>DON'T</u></b> want).
             </li>
             <li>
-                The &amp;nbsp inserts non-breaking white space to indent (i.e. indent white-space I <b>DO</b> want in the preformat).
+                The &amp;nbsp inserts non-breaking white space to indent (i.e. indent white-space I <b><u>DO</u></b> want).
             </li>
             <ul>
                 <li>This HTML source code<br>
@@ -242,11 +247,11 @@
                     ...<br>
                     <b>&lt;/code&gt;&lt;/pre&gt;</b> 
                 </li>
-                <li>is rendered as follows;
+                <li>is rendered with indentation as follows;
                     <pre><code>some code<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;more code...<br>
                     ...</code></pre> 
-                <li>This HTML source code; "some text <b>&lt;code&gt;</b> some code <b>&lt;/code&gt;</b> more text ..." is rendered as "some text <code>some code</code> more text ...". 
+                <li>This HTML source code; "some text <b>&lt;code&gt;</b> some code <b>&lt;/code&gt;</b> more text ..." is rendered as "some text <code class=inline-code>some code</code> more text ...". 
                 </li>
             </ul> 
         </ul>
@@ -285,24 +290,24 @@
         <h2>
             Color Reference Charts and Sites
         </h2>
-        <ul class="ul-list">
-            <li class="ul-list-item">
-                <a href="http://color.adobe.com/" alt="color.adobe.com">
+        <ul class="list">
+            <li class="list-item">
+                <a href="http://color.adobe.com/" alt="">
                     <img class="thumbnail-image" src="color-adobe-com.png" alt=""/>
+                    <span class="list-item-title">color.adobe.com</span>
                 </a>
-                <span class="ul-list-item-title">color.adobe.com</span>
             </li>
-            <li class="ul-list-item">
-                <a href="./rgb-color-wheel.png" alt="rgb color wheel">
+            <li class="list-item">
+                <a href="./rgb-color-wheel.png" alt="">
                     <img class="thumbnail-image" src="rgb-color-wheel.png" alt=""/>
+                    <span class="list-item-title">rgb color wheel</span>
                 </a>
-                <span class="ul-list-item-title">rgb color wheel</span>
             </li>
-            <li class="ul-list-item">
-                <a href="./color-schemes-101.jpg" alt="color schemes 101">
+            <li class="list-item">
+                <a href="./color-schemes-101.jpg" alt="">
                     <img class="thumbnail-image" src="color-schemes-101.jpg" alt=""/>
+                    <span class="list-item-title">color schemes 101</span>
                 </a>
-                <span class="ul-list-item-title">color schemes 101</span>
             </li>
         </ul>
         <!--=================================================================-->
