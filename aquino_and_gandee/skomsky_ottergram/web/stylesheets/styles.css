@@ -34,12 +34,10 @@ a {
     background-color: rgba(62, 56, 242, 1);
 }
 .main-content {
-    flex: 1 1 auto;         /* flexbox: */
     display: flex;          /* flexbox: */ 
     flex-direction: column; /* flexbox: */   
+    flex: 1 1 auto;         /* flexbox: */
 }
-
-
 /*
 .thumbnail-item + .thumbnail-item {
     margin-top: 10px;
@@ -109,6 +107,11 @@ a {
 .detail-image {
     width: 90%;
     opacity: 1;   
+}
+
+@media all and (min-width: 768px) {
+     /* sytles will go in here */
+     
 }
 
 /* Color Theme Swatches in RGBA  darkest top to lightest bottom

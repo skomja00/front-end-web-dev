@@ -1,0 +1,64 @@
+/*rgba(167, 221, 242, 1); blue      */
+/*rgba(167, 228, 242, 1); teal      */
+/*rgba(220, 238, 242, 1); bluelight */ 
+/*rgba(182, 242, 242, 1); teallight */ 
+/*rgba(242, 242, 223, 1); parchment */
+
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../res/medical-healthcare-background.jpg'); 
+    background-position: left top;
+    background-repeat: norepeat;
+    background-size: 100%;
+}
+div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.header-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(167, 221, 242, 1); /* blue */
+    border: 2px solid #bbbbbb;
+}
+.navigation-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(220, 238, 242, 1); /* bluelight */
+    border: 2px solid #bbbbbb;
+}
+.horiz-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 100%;
+    background-color: rgba(182, 242, 242, .5); /* teallight */
+    border: 2px solid #bbbbbb;
+}
+.sidebar-flex-item {
+    order: 2;
+    flex-grow: 1;
+    flex-basis: 25%;
+    background-color: rgba(242, 242, 223, 1); /* parchment */
+    border: 2px solid #bbbbbb;
+}
+.content-flex-item {
+    order: 1;
+    flex-grow: 1;
+    flex-basis: 75%;
+    background-color: rgba(242, 242, 223, 1); /* parchment */
+    border: 2px solid #bbbbbb;
+    text-align: left;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(167, 221, 242, 1);/* blue */
+    border: 2px solid #bbbbbb;
+}

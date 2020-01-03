@@ -144,7 +144,6 @@ a {
     overflow-x: auto;
     list-style: none;
     padding: 0;
-
 }
 
 .list-item {
@@ -155,7 +154,7 @@ a {
  }
 
 .list-item-image {
-    border: 0px solid rgba(64, 64, 64, 1); /* light gray */ 
+    border: 0px; 
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
@@ -166,7 +165,6 @@ a {
     padding: 0px 0px;
     background-color: rgba(128, 128, 128, 1); /* lighter gray */
     color: rgba(0, 0, 0, 1); /* black */
-    border-radius: 0px; 
 }
 
 a:hover {
@@ -177,9 +175,11 @@ a:hover {
     otherwise each element gets borders looks strange. 
     instead border the whole thing  */
 .list-item:hover {
-    border: 3px solid #000000;
+    border: 15px solid;
+    border-image: url('../simple-elegant-page-borders_345412.png') 150 stretch;
+   
 }
-/* dont style the li > anchor */
+/* dont border the li > anchor */
 .list-item > a:hover{
     border: 0px;    
 }

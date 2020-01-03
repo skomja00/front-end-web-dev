@@ -52,6 +52,19 @@
         <p>
             There are no rules about how to structure or name your files and folders. However, projects follow some conventions used by many front-end developers.
         </p>
+        <p>
+            Document Object Model (DOM) is used to access objects in web pages with eg. javascript. 
+        </p>
+        <pre><code>&lt;!doctype HTML&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;html&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!----&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!----&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;html&gt;<br>
+        </code></pre>
         <ul>
             <li>
                 Your <i>index.html</i> file will hold your HTML code.
@@ -78,14 +91,14 @@
             Creating a style sheet baseline
         </h2>
         <p>
-            All browsers come with a set of default styles, but the defaults are different from browser to browser. The browser reads the styles in orderstarting with the first linked style sheet. For example the browser reads the  <i>"normalize.min.css"</i> before it reads <i>"your-style-sheet"</i> and so on. Finally the browser provides a default stylesheet, call the <i>user agent (UA)</i> stylesheet. Styles that you specify override the defaults.
+            All browsers come with a set of default styles, but the defaults are different from browser to browser. The browser reads the styles in order starting with the first linked style sheet. For example the browser reads the  <i>"normalize.min.css"</i> before it reads <i>"your-style-sheet"</i> and so on. Finally the browser provides a default stylesheet, call the <i>user agent (UA)</i> stylesheet. Styles that you specify override the defaults.
         </p>
         <pre><code>&lt;!doctype html&gt;<br>
             &lt;html&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="https://cdnjs.../normalize.min.css"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="stylesheets/your-style-sheet.css"<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* user agent "stylesheet" */<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* <i>user agent stylesheet</i> */<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
         &lt;body&gt;<br>
@@ -96,7 +109,7 @@
         <p>
             When you create individual style, you do so by writing styling rules, which consist of two main parts: <i>selectors</i> and <i>declarations</i>.
         </p>
-        <img src="selector.png"/>
+            <img src="selector.png" alt=""/>
         <p>
             The first part of a styling rule is one or more selectors. Selectors are not limited to tag names. You will rarely use element selectors in your stylesheets becuase you will not often want ot apply the exact same styles to every occurrence of a particular tag. You write selectors that apply to more targeted set of elements by increasing the selector's <i>specificity</i>. For example you can write selectors based on attributes. Selectors based on attributes are more specific than selectors based on element names. If a stylesheet contains multiple styles that could apply to the same element, the styles with a selector of higher specificity will be used instead of styles whose selector has a lower specificity. 
         <p>
@@ -220,6 +233,17 @@
         </p>
         <!--=====================================================================-->
         <h1>
+            Web Page Format Proposals
+        </h1>
+        <!--=====================================================================-->
+        <p>
+            <a href="https://www.w3schools.com/bootstrap/default.asp">www.w3schools.com/bootstrap/</a>
+        </p>
+        <p>
+            Flexbox model
+        </p>
+        <!--=====================================================================-->
+        <h1>
             Appendix
         </h1>
         <!--=====================================================================-->
@@ -241,7 +265,7 @@
                 The &amp;nbsp inserts non-breaking white space to indent (i.e. indent white-space I <b><u>DO</u></b> want).
             </li>
             <ul>
-                <li>This HTML source code<br>
+                <li>This block HTML source code<br>
                     <b>&lt;pre&gt;&lt;code&gt;</b> some code <b>&lt;br&gt;</b><br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&amp;nbsp&amp;nbsp</b> more code;<br>
                     ...<br>
@@ -251,10 +275,24 @@
                     <pre><code>some code<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;more code...<br>
                     ...</code></pre> 
-                <li>This HTML source code; "some text <b>&lt;code&gt;</b> some code <b>&lt;/code&gt;</b> more text ..." is rendered as "some text <code class=inline-code>some code</code> more text ...". 
+                <li>This inline HTML source code; "some text <b>&lt;code&gt;</b> some code <b>&lt;/code&gt;</b> more text ..." is rendered as "some text <code class=inline-code>some code</code> more text ...". 
                 </li>
             </ul> 
         </ul>
+        <p>
+           <span class="html-tip">html</span> The CSS border-image property allows you to specify an image to be used instead of the normal border around an element. The border-image property takes the image and slices it into nine sections, like a tic-tac-toe board. It then places the corners at the corners, and the middle sections are repeated or stretched as you specify. The property has three parts:
+            <ol>
+                <li>
+                    The image to use as the border.
+                </li>
+                <li>
+                    Where to slice the image.
+                </li>
+                <li>
+                    Define whether the middle sections should be repeated or stretched.
+                </li>
+            </ol>
+        </p>
         <p>
             <span class="netbeans-tip">NetBeans</span>: To Run Your Page: If your page needs the HTTP protocol (for example making AJAX calls), you need to have Apache serve up your web page. To do this,
         </p>
@@ -300,7 +338,7 @@
             <li class="list-item">
                 <a href="./rgb-color-wheel.png" alt="">
                     <img class="list-item-image" src="rgb-color-wheel.png" alt=""/>
-                    <span class="list-item-title">rgb color wheel</span>
+                    <span class="list-item-title">RGB color wheel</span>
                 </a>
             </li>
             <li class="list-item">
