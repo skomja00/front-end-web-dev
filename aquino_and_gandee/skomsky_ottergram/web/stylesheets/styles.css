@@ -12,17 +12,52 @@ html, body {
     height: 100%;           /* flexbox: */
 }
 body {
-    display: flex;          /* flexbox: */ 
+    display: flex;          /* flexbox container */ 
     flex-direction: column; /* flexbox: */
     font-size: 10px;
     background: rgba(130, 159, 217, 1); /* Glowing-Blue-5-RGBA */
 }
+.main-header {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;  
+    order: 1;
+}
+.main-content-container {
+    display: flex;                  /* flexbox container */ 
+    flex-direction: column;   
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    order: 2;
+}
+.thumbnail-list {                   
+                                    /* flexbox properties...                  */
+    display: flex;                  /* flexbox container                      */
+    flex-grow: 0;                   /* 0/1= do i want to grow larger? on/off  */
+    flex-shrink: 0;                 /* 0/1= will i shrink? on/off             */
+    flex-basis: auto;               /* auto= calculate my size for me         */         
+    order: 3;                       /* tells browser ordinal drawing order    */
+    justify-content: flex-start;    /* draw spacing along main axis           */
+
+                                    /* scrollbar proerties...                 */
+    white-space: nowrap;            /* dont wrap inline items to next line    */            
+    overflow-x: auto;               /* horizontal scrollbar if overflow       */
+    list-style: none;
+    
+    padding: 0;
+}
+.detail-image-container {           /* flexbox container */
+    display: flex;       
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;         
+    justify-content: center;  
+    order: 4;
+    align-items: center;
+}
 a {
     text-decoration: none; // <li> display: block; removes bullets!
-}
-
-.main-header {
-    flex: 0 1 auto;         /* flexbox: */
 }
 
 .logo-text {
@@ -33,25 +68,10 @@ a {
     color: rgba(92, 115, 242, 1);
     background-color: rgba(62, 56, 242, 1);
 }
-.main-content {
-    display: flex;          /* flexbox: */ 
-    flex-direction: column; /* flexbox: */   
-    flex: 1 1 auto;         /* flexbox: */
-}
 /*
 .thumbnail-item + .thumbnail-item {
     margin-top: 10px;
 } */
-.thumbnail-list {
-    white-space: nowrap;
-    overflow-x: auto;
-    list-style: none;
-    flex: 0 1 auto; /* flexbox: */
-    order: 2; /* flexbox: move the thumbnail list below the detail image */
-    display: flex; /* flexbox: */
-    justify-content: space-between; /* flexbox: spacing */
-    padding: 0;
-}
 .thumbnail-item {
     display: inline-block;
 /*  value=block
@@ -81,15 +101,6 @@ a {
     border-radius: 0px;
     font-size: 18px;
 }
-
-.detail-image-container { /* flexbox: */
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 .detail-image-frame {
     position: relative; /* flexbox: */
     text-align: center;
@@ -103,17 +114,22 @@ a {
     font-size: 40px;
     text-shadow: rgba(0, 0, 0, .9) 4px 6px 9px;
 }
-
 .detail-image {
     width: 90%;
     opacity: 1;   
 }
-
-@media all and (min-width: 768px) {
-     /* sytles will go in here */
-     
+@media all and (min-width: 1000px) {
+    .main-content-container {
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .thumbnail-list {
+        flex-direction: column;
+                                    /* scrollbar proerties...                 */
+        white-space: nowrap;        /* dont wrap inline items to next line    */            
+        overflow-y: auto;           /* vertical scrollbar if overflow         */
+    }
 }
-
 /* Color Theme Swatches in RGBA  darkest top to lightest bottom
 Glowing-Blue-1-rgba { color: rgba(35, 10, 89, 1); }
 Glowing-Blue-2-rgba { color: rgba(62, 56, 242, 1); }

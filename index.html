@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Front-End Web Dev Refesher</title>
+        <title>Front-End Web Dev 101...</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="stylesheets/github.css" />
@@ -31,7 +31,11 @@
                     The Node Package Manager, <i>npm</i>, is needed for installing open-source development tools from the internet. <i>browser-sync</i> is a JavaScript tool that automatically reloads the browser when you save changes to your code. Install <i>browser-sync</i> using this command at the command line:<br> <code class=inline-code>npm install -g browser-sync</code><br> 
                 <li>
                     Static sites: A basic use is to watch all files (i.e. index.html, CSS stylesheets) directory and update connected browsers if a change occurs. Navigate your terminal window to a project folder and run the appropriate command to start <i>browser-sync</i>.<br>
-                    <code class=inline-code>browser-sync start --server --browser "Google Chrome" --files "stylesheets/*.css, *.html"</code>
+                    <pre><code>rem Google Chrome<br>
+                        browser-sync start --server --browser "chrome.exe" --files "stylesheets/*.css, *.html, scripts/*.js"<br>
+                        rem moz://a firefox<br>
+                        browser-sync start --server --browser "firefox.exe" --files "stylesheets/*.css, *.html, scripts/*.js"<br>
+                        </code></pre>
                 </li>
                 <li>
                     Dynamic sites: If you’re running a local server with PHP or similar, you’ll need to use the proxy mode. Browsersync will wrap your vhost with a proxy URL to view your site.<br>
@@ -200,12 +204,12 @@
         </h2>        
         <!--=====================================================================-->
         <p>
-            For a horizontally scrolling list, each item should be laid out horizontally on a single line with a scrollbar along the horizontal space to accommodate content that overflows. Without this declaration, you would have to scroll the entire web page to see the additional list item elements.
+            For a scrolling list, each item should be laid out on a single axis with a scrollbar along the axis space to accommodate content that overflows. Without this declaration, you would have to scroll the entire web page to see the additional list item elements.
         </p>
         <p>
             <pre><code>.list {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;white-space: nowrap;&nbsp;/* declaration prevent the elements from wrapping */<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;overflow-x: auto;&nbsp;&nbsp;&nbsp;&nbsp;/* add a scrollbar along the horizontal space */<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;overflow-?: auto;&nbsp;&nbsp;&nbsp;&nbsp;/* add a scrollbar along the space. ? is x=horizontal y=vertical */<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;list-style: none;&nbsp;&nbsp;&nbsp;&nbsp;/* remove bullets or numbers from list items */<br>
             </code></pre>            
         </p>
@@ -221,13 +225,19 @@
             The flexbox model
         </h2>
         <p>
-            You have seen <i>display</i> styles specifiying the properties <i>block</i> and <i>inline</i>.
+            You have seen <i>display</i> styles specifiying the properties <i>block</i> and <i>inline</i>. Block elements occupy their own horizontal line. Another way to think of this is that block elements flow from top to bottom. Block elements stack vertically. Inline elments flow from left to right. Inline elements line up horizontally.   
         </p>
+        <!--=====================================================================-->
+        <h1>
+            Chapter 5 Adaptive Layouts with Media Queries
+        </h1>
+        <!--=====================================================================-->
+        <h2>
+            Media Query
+        </h2>        
+        <!--=====================================================================-->
         <p>
-            Block elements occupy their own horizontal line. Another way to think of this is that block elements flow from top to bottom. Block elements stack vertically. 
-        </p>
-        <p>
-            Inline elments flow from left to right. Inline elements line up horizontally.   
+            Media queries let you group CSS declaration blocks and specify the conditions under which they should be applied. These conditions may be something like "if the viewport shrinks below a minimum width", trigger your media query styles to reformat for a small viewport. 
         </p>
         <!--=====================================================================-->
         <h1>
