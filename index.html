@@ -237,8 +237,63 @@
         </h2>        
         <!--=====================================================================-->
         <p>
-            Media queries let you group CSS declaration blocks and specify the conditions under which they should be applied. These conditions may be something like "if the viewport shrinks below a minimum width", trigger your media query styles to reformat for a small viewport. 
+            Media queries let you group CSS declaration blocks and specify the conditions under which they should be applied. These conditions may be something like "if the viewport is at or above a minimum width", trigger your media query styling rules to reformat for a wider viewport. 
         </p>
+        <p>
+            <pre><code>&lt;!doctype HTML&gt;<br>
+                &lt;html&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--set width of layout viewport to be same as device's screen width--&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+                ...<br>
+            </code></pre>
+        </p>
+
+        <p>
+            <pre><code>/* in the stylesheet typically at the bottom */<br>
+                @media all and (min-width: 1000px) {  /* we just became wide enough for a horizontal layout... */<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.main-content-container {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex-direction: row;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.thumbnail-list {&nbsp;&nbsp;&nbsp;&nbsp;/* move the list to the left... */<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;overflow-y: auto;&nbsp;&nbsp;&nbsp;&nbsp;/* and change scrolling to up and down. */<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                ...<br>
+            </code></pre>
+        </p>
+
+
+
+
+
+        .detail-image {
+            width: 90%;
+            opacity: 1;   
+        }
+        @media all and (min-width: 1000px) {
+            .main-content-container {
+                flex-direction: row;
+                overflow: hidden;
+            }
+            .thumbnail-list {
+                flex-direction: column;
+                                            /* scrollbar proerties...                 */
+                white-space: nowrap;        /* dont wrap inline items to next line    */            
+                overflow-y: auto;           /* vertical scrollbar if overflow         */
+            }
+        }
+
+
+        <!--=====================================================================-->
+        <h1>
+            Chapter 6 Handling Events With JavaScript
+        </h1>
+        <!--=====================================================================-->
+        <h2>
+            Media Query
+        </h2>        
         <!--=====================================================================-->
         <h1>
             Web Page Format Proposals
