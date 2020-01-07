@@ -32,9 +32,9 @@
                 <li>
                     Static sites: A basic use is to watch all files (i.e. index.html, CSS stylesheets) directory and update connected browsers if a change occurs. Navigate your terminal window to a project folder and run the appropriate command to start <i>browser-sync</i>.<br>
                     <pre><code>rem Google Chrome<br>
-                        browser-sync start --server --browser "chrome.exe" --files "stylesheets/*.css, *.html, scripts/*.js"<br>
+                        browser-sync start --server --browser "chrome.exe" --files "styles/*.css, *.html, js/*.js" "<br>
                         rem moz://a firefox<br>
-                        browser-sync start --server --browser "firefox.exe" --files "stylesheets/*.css, *.html, scripts/*.js"<br>
+                        browser-sync start --server --browser "firefox.exe" --files "styles/*.css, *.html, js/*.js" <br>
                         </code></pre>
                 </li>
                 <li>
@@ -269,29 +269,6 @@
                 ...<br>
             </code></pre>
         </p>
-
-
-
-
-
-        .detail-image {
-            width: 90%;
-            opacity: 1;   
-        }
-        @media all and (min-width: 1000px) {
-            .main-content-container {
-                flex-direction: row;
-                overflow: hidden;
-            }
-            .thumbnail-list {
-                flex-direction: column;
-                                            /* scrollbar proerties...                 */
-                white-space: nowrap;        /* dont wrap inline items to next line    */            
-                overflow-y: auto;           /* vertical scrollbar if overflow         */
-            }
-        }
-
-
         <!--=====================================================================-->
         <h1>
             Chapter 6 Handling Events With JavaScript
