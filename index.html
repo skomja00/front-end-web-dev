@@ -19,10 +19,32 @@
         <!--=====================================================================-->
         <ul>
             <li>
+                <a href=#chapter01>Chapter 01</a>
+            </li>
+            <li>
                 <a href=#chapter02>Chapter 02</a>
+            </li>
+            <li>
+                <a href=#chapter03>Chapter 03</a>
+            </li>
+            <li>
+                <a href=#chapter04>Chapter 04</a>
+            </li>
+            <li>
+                <a href=#chapter05>Chapter 05</a>
+            </li>
+            <li>
+                <a href=#chapter06>Chapter 06</a>
+            </li>
+            <li>
+                <a href=#appendix>Appendix</a>
+            </li>
+            <li>
+                <a href=#reflist>Reference List</a>
             </li>
         </ul>
         <!--=====================================================================-->
+        <a id="chapter01"></a>
         <h1>
             Chapter 1 Setting Up Your Development Environment
         </h1>
@@ -96,6 +118,7 @@
             Self-closing tags do not wrap content, but instead refer to a resource. For instance when the browser encounters a &lt;img&gt; tag, it draws the image to the page. This is know as a <i>replaced element</i>. Because they do not wrap content or other elements, they do not have a corresponding closing tag. You will sometimes see self-closing tags written with a slash before the right angle-bracket.
         </p>
         <!--=====================================================================-->
+        <a id="chapter03"></a>
         <h1>
             Chapter 3 Styles
         </h1>
@@ -206,6 +229,7 @@
             </code></pre>
         </p>
         <!--=====================================================================-->
+        <a id="chapter04"></a>
         <h1>
             Chapter 4
         </h1>
@@ -213,7 +237,6 @@
         <h2>
             Responsive Layouts
         </h2>        
-        <!--=====================================================================-->
         <p>
             For a scrolling list, each item should be laid out on a single axis with a scrollbar along the axis space to accommodate content that overflows. Without this declaration, you would have to scroll the entire web page to see the additional list item elements.
         </p>
@@ -244,7 +267,38 @@
         <p>
             Flexbox allows you to subdivide flex items into flex containers. This technique lets you fous on the layers. Working with nested flex containers is an exception to the atomic styling approach to creating the look and feel of visual components. Instead of styling the smallest, innermost elements first and then working your way out to the largest elements, when working on a layut with flexbox it is more useful to start with the outermost elements and work your way in. Make an element a flex container by adding <code class="inline-code">display: flex</code> declaration to its styling rule.
         </p>
+        <h2>
+            Absolute and Relative Positioning
+        </h2>
+        <p>
+            There are three requireements for absolute positining. The absolutely positioned element must have:
+        </p>
+        <ul>
+            <li>
+                an ancestor element with an explicitly declare <i>position</i> property with a value of <i>relative</i> or <i>absolute</i>. If no ancestor has a declared <i>position</i> property the absolutely positioned element will be place relative to the <code class="inline-code">&lt;html&gt;</code> element (the browser window).
+                <pre><code>...<br>
+                    .ancestor-style-class {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;position: relative; /* render this in the normal flow */<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                    }<br>
+                </code></pre>            
+            </li>
+            <li>
+                the property <code class="inline-code">position: absolute;</code>
+            </li>
+            <li>
+                coordinates specifying the distance from the edge of its container
+                <pre><code>...<br>
+                    .style-class {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;top: -35px;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;left: 30px;<br>
+                    }<br>
+                </code></pre>            
+            </li>
+        </ul>
         <!--=====================================================================-->
+        <a id="chapter05"></a>
         <h1>
             Chapter 5 Adaptive Layouts with Media Queries
         </h1>
@@ -281,6 +335,7 @@
             </code></pre>
         </p>
         <!--=====================================================================-->
+        <a id="chapter06"></a>
         <h1>
             Chapter 6 Handling Events With JavaScript
         </h1>
@@ -300,6 +355,7 @@
             Flexbox model
         </p>
         <!--=====================================================================-->
+        <a id="appendix"></a>
         <h1>
             Appendix
         </h1>
@@ -419,8 +475,9 @@
             </li>
         </ul>
         <!--=================================================================-->
+        <a id="reflist"></a>
         <h1 id="sources">
-            Citations:
+            Reference List:
         </h1>
         <!--=================================================================-->
         <h2>
