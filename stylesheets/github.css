@@ -138,7 +138,9 @@ pre {
 a {
     text-decoration: none; /* <li> display: block; removes bullets! */
 }
-
+.list-nostyle {
+    list-style: none;
+}
 .list {
     white-space: nowrap;
     overflow-x: auto;
