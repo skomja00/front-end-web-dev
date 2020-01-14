@@ -22,7 +22,7 @@
                 <a href=#chapter01>Chapter 01</a>
                 <ul>
                     <li>
-                        Installing <i>Node.js</i> and <i>browser-sync</i>
+                        <a href=#installnode>Installing <i>Node.js</i> and <i>browser-sync</i></a>
                     </li>
                 </ul>
                 
@@ -55,6 +55,7 @@
             Chapter 1 Setting Up Your Development Environment
         </h1>
         <!--=====================================================================-->
+        <a id="installnode"></a>
         <h2>
             Installing <i>Node.js</i> and <i>browser-sync</i>
         </h2>
@@ -62,7 +63,7 @@
             applications, and lets you use programs written in JavaScript from 
             the command line. Most front-end development tools are written for 
             use with <i>Node.js</i>. Download and install <i>Node</i> here 
-            <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>
+            <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>.
             It provides two command-line programs:
             <ul>
                 <li>
@@ -73,9 +74,9 @@
                 <li>
                     Static sites: A basic use is to watch all files (i.e. index.html, CSS stylesheets) directory and update connected browsers if a change occurs. Navigate your terminal window to a project folder and run the appropriate command to start <i>browser-sync</i>.<br>
                     <pre><code>rem Google Chrome<br>
-                        browser-sync start --server --browser "chrome.exe" --files "styles/*.css, *.html, js/*.js" "<br>
+                        browser-sync start --server --browser "chrome.exe" --files "styles/*.css, *.html, js/*.js"<br>
                         rem moz://a firefox<br>
-                        browser-sync start --server --browser "firefox.exe" --files "styles/*.css, *.html, js/*.js" <br>
+                        browser-sync start --server --browser "firefox.exe" --files "styles/*.css, *.html, js/*.js"<br>
                         </code></pre>
                 </li>
                 <li>
@@ -245,10 +246,14 @@
         <!--=====================================================================-->
         <h2>
             Responsive Layouts
-        </h2>        
+        </h2>
+        <p>
+            The <code class="inline-code">&lt;div&gt;</code> tag defines a division or a section in an HTML document. The <code class="inline-code">&lt;div&gt;</code> element is often used as a <b><u>container</u></b> for other HTML elements to style them with CSS or to perform certain tasks with JavaScript.
+        </p>        
         <p>
             For a scrolling list, each item should be laid out on a single axis with a scrollbar along the axis space to accommodate content that overflows. Without this declaration, you would have to scroll the entire web page to see the additional list item elements.
         </p>
+    </p>>
         <p>
             <pre><code>.list {<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;white-space: nowrap;&nbsp;/* declaration prevent the elements from wrapping */<br>
