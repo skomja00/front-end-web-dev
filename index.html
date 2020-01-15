@@ -9,10 +9,11 @@
     <body id=ricepaper>
         <div id="front-end-web-dev">
             <h1>
-                HTML and CSS 101...
+                HTML and CSS 101...maybe some JavaScript
             </h1>
         </div>
         <!--=====================================================================-->
+        <a id="toc"></a>
         <h1>
             TOC
         </h1>
@@ -29,6 +30,11 @@
             </li>
             <li>
                 <a href=#chapter02>Chapter 02</a>
+                <ul>
+                    <li>
+                        <a href=#dom>Document Object Model (DOM)</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href=#chapter03>Chapter 03</a>
@@ -74,9 +80,9 @@
                 <li>
                     Static sites: A basic use is to watch all files (i.e. index.html, CSS stylesheets) directory and update connected browsers if a change occurs. Navigate your terminal window to a project folder and run the appropriate command to start <i>browser-sync</i>.<br>
                     <pre><code>rem Google Chrome<br>
-                        browser-sync start --server --browser "chrome.exe" --files "styles/*.css, *.html, js/*.js"<br>
+                        browser-sync start --server --browser "chrome.exe" --files "style/*.css, *.html, js/*.js"<br>
                         rem moz://a firefox<br>
-                        browser-sync start --server --browser "firefox.exe" --files "styles/*.css, *.html, js/*.js"<br>
+                        browser-sync start --server --browser "firefox.exe" --files "style/*.css, *.html, js/*.js"<br>
                         </code></pre>
                 </li>
                 <li>
@@ -87,6 +93,7 @@
             </ul>
         <!--=====================================================================-->
         <a id="chapter02"></a>
+        <a class="toc-nav" href=#toc>Back to TOC</a>
         <h1>
             Chapter 2 Setting Up Your First Project
         </h1>
@@ -98,26 +105,36 @@
             There are no rules about how to structure or name your files and folders. However, projects follow some conventions used by many front-end developers.
         </p>
         <p>
-            Document Object Model (DOM) is used to access objects in web pages with eg. javascript. 
+            This is a bare-bones template of an HTML document;
         </p>
         <pre><code>&lt;!doctype HTML&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&lt;html&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!----&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- this is an html comment --&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!----&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&lt;html&gt;<br>
         </code></pre>
-        <ul>
-            <li>
-                Your <i>index.html</i> file will hold your HTML code.
-            </li>
-            <li>
-                Your <i>./stylesheets</i> folder will hold one or more files with styling information. Give your CSS files names that describe what part of the page or site they pertain to, such as <i>./stylesheets/github.css</i>.
-            </li>
-        </ul>
+        <a id="dom"></a>
+        <h2>
+            The Document Object Model (DOM)
+        </h2>
+        <p>
+            Document Object Model (DOM) is used to access objects in web page documents (HTML) and XML documents with e.g. javascript.  The HTML DOM defines a standard way for accessing and manipulating HTML documents. It presents an HTML document as a tree-structure. The XML DOM defines a standard way for accessing and manipulating XML documents. It presents an XML document as a tree-structure. Understanding the DOM is a must for anyone working with HTML or XML.      
+        </p>
+        <p>From w3schools.com regarding the DOM:
+            <blockquote>
+                "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
+            </blockquote>
+        </p>
+        <p>
+            Your <i>index.html</i> file will hold your HTML code.
+        </p>
+        <p>
+            Your <i>./stylesheets</i> folder will hold one or more files with styling information. Give your CSS files names that describe what part of the page or site they pertain to, such as <i>./stylesheets/github.css</i>.
+        </p>
         <h2>
             Anatomy of a tag
         </h2>
@@ -129,6 +146,7 @@
         </p>
         <!--=====================================================================-->
         <a id="chapter03"></a>
+        <a class="toc-nav" href=#toc>Back to TOC</a>
         <h1>
             Chapter 3 Styles
         </h1>
@@ -240,6 +258,7 @@
         </p>
         <!--=====================================================================-->
         <a id="chapter04"></a>
+        <a class="toc-nav" href=#toc>Back to TOC</a>
         <h1>
             Chapter 4
         </h1>
@@ -313,6 +332,7 @@
         </ul>
         <!--=====================================================================-->
         <a id="chapter05"></a>
+        <a class="toc-nav" href=#toc>Back to TOC</a>
         <h1>
             Chapter 5 Adaptive Layouts with Media Queries
         </h1>
@@ -350,6 +370,7 @@
         </p>
         <!--=====================================================================-->
         <a id="chapter06"></a>
+        <a class="toc-nav" href=#toc>Back to TOC</a>
         <h1>
             Chapter 6 Handling Events With JavaScript
         </h1>
@@ -370,6 +391,7 @@
         </p>
         <!--=====================================================================-->
         <a id="appendix"></a>
+        <a class="toc-nav" href=#toc>Back to TOC</a>
         <h1>
             Appendix
         </h1>
@@ -467,7 +489,6 @@
         <p>
             Value is the quantity of light reflection; high values of reflection are lighter/white, low reflection values are darker/black
         </p>
-
         <ul class="list">
             <li class="list-item">
                 <a href="http://color.adobe.com/" alt="">
@@ -490,6 +511,7 @@
         </ul>
         <!--=================================================================-->
         <a id="reflist"></a>
+        <a class="toc-nav" href=#toc>Back to TOC</a>
         <h1 id="sources">
             Reference List:
         </h1>
