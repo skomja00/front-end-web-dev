@@ -196,5 +196,4 @@ a > span:hover {
 .list-item-image:hover {
     border: 0px solid rgba(64, 64, 64, 1); /* light gray */ 
     opacity: 1;
-    filter: alpha(opacity=100); /* For IE8 and earlier */
 }
