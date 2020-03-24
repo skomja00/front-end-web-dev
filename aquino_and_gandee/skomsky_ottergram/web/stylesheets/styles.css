@@ -57,7 +57,7 @@ body {
     align-items: center;
 }
 a {
-    text-decoration: none; // <li> display: block; removes bullets!
+    text-decoration: none; /* <li> display: block; removes bullets! */
 }
 
 .logo-text {
